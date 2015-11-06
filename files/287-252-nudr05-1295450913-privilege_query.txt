@@ -1,0 +1,28 @@
+select distinct
+  gpx.PrivilegeID,
+  lower(concat(pt.PrivilegeTypeName, '.', po.ObjectName)) PrivilegeName
+from
+  t_objectxrefs dgox,
+  t_objecttypes ot,
+  t_objects o,
+  t_objectxrefs ugox,
+  t_actorprivilegexrefs gpx,
+  t_actorprivilegexrefs dpx,
+  t_privileges p,
+  t_privilegetypes pt,
+  t_objects po
+where
+  ot.ObjectTypeName = 'Group' and
+  o.ObjectTypeID = ot.ObjectTypeID and
+  dgox.ChildObjectID = o.ObjectID and
+  dgox.ParentObjectID = 5581 and
+  ugox.ParentObjectID = dgox.ChildObjectID and
+  ugox.ChildObjectID = 5582 and
+  gpx.ObjectID = ugox.ParentObjectID and
+  dpx.ObjectID = dgox.ParentObjectID and
+  gpx.PrivilegeID = dpx.PrivilegeID and
+  p.PrivilegeID = gpx.PrivilegeID and
+  pt.PrivilegeTypeID = p.PrivilegeTypeID and
+  po.ObjectID = p.ObjectID
+order by
+  PrivilegeName;

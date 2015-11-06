@@ -1,0 +1,482 @@
+/* CSS Document */
+img, #cpBottom, #cpHeader, #cpSlice01, #cpSlice02, #cpSlice03, #cpSlice04, #cpSlice05, #cpSlice06, #cpSlice07, #cpSlice08, #cpSlice09 { behavior: url(_template/iepngfix/iepngfix.htc); }
+
+#cpContainer {
+	position: absolute;
+	visibility: hidden;    
+    width: 200px !important;
+}
+
+#cpContainerTimer {
+	padding: 20px 0;
+	background: url(images/ticker.gif) no-repeat center;
+        position: relative;
+        z-index: 4000;
+}
+
+#cp
+{
+	position: relative;
+	background-color: transparent;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	z-index: 10000;    
+    float: left;    
+}
+
+#cp input {
+	font-size: 12px;
+}
+
+#cp h1 {
+	color: #FF6701;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0px;
+    margin-top: 10px;
+    
+}
+
+#cp h2 {
+	color: #175A87;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+.cpContainerCell {	
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+
+}
+.h2Bump {
+	padding-top: 6px;
+}
+#cp a, #cp td {
+	color: #175A87;
+	margin: 0px;
+	padding: 0px;
+}
+.cpButton {
+		color: #FFFFFF;
+		background-color: #1B6097;
+		border: 1px solid #175A87;
+		cursor: pointer;
+		margin: 0px;
+		padding: 0px;
+		width: auto; 
+		overflow: visible;		
+		padding-bottom: 3px;
+}
+
+
+.shadowTop, .shadowBottom {
+	height: 6px;
+	background-repeat: repeat-x;
+	background-position: center;
+	margin: 0px;
+	padding: 0px;
+}
+.shadowTop {
+	background-image: url(images/shadowTop.png);
+}
+.shadowBottom {
+	background-image: url(images/shadowBottom.png);
+	background-position: center;
+}
+
+
+#prefHide, #pointHide, #eventHide, #advPointHide, #statsHide, #alarmHide, #contactHide, #summaryHide, #dayAheadHide {
+	padding-bottom: 0px;
+	padding-top:  20px;
+	padding-left:  0px;
+	padding-right: 0px;
+	background-image: url(images/cpCollapse.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#prefHide:hover, #pointHide:hover, #eventHide:hover, #advPointHide:hover, #statsHide:hover, #alarmHide:hover, #contactHide:hover, #summaryHide:hover, #dayAheadHide:hover {
+	background-image: url(images/cpCollapseHover.gif);
+}
+
+#cpPref, #cpPoint, #cpEvent, #cpAdvPoint, #cpStats, #cpAlarm, #cpContact, #cpSummary, #cpDayAhead {
+    border: none;
+	
+	padding-top:  0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	}
+#cpPref table, #cpPoint table, #cpEvent table, #cpAdvPoint table, #cpStats table, #cpAlarm table, #cpContact table, #cpSummary table, #cpDayAhead table {
+	background-color: #CBCCD9;
+	border-left: 2px solid #505052;
+	border-right: 2px solid #505052;
+}
+
+
+#cpSlice01, #cpSlice02, #cpSlice03, #cpSlice04, #cpSlice05, #cpSlice06, #cpSlice07, #cpSlice08, #cpSlice09 {
+	height: 25px;   	
+    background: transparent url(images/gradientSlice.png) repeat-x top left;
+    width: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#cpHeader{	
+	margin-top: 15px;
+}
+#cpBottom {
+	height: 15px;
+	background: transparent url(images/gradientSlice.png) repeat-x bottom;
+    	
+}
+
+/*  ==============================================================================
+    Preference Forms
+    ============================================================================== */
+
+#iframeContainer {
+        position: relative;        
+        margin-left: 175px;
+        width: 700px;
+}
+
+#cpManagePoint, #cpHidePoint, #cpSetDefaultPoint, #cpSetZip, #cpChangePassword, #cpChangeEmail, #cpChangeTelephone, #cpChangeMeterContacts, #cpToggleRetired {
+	margin-left: 15px;
+	padding-bottom: 5px;
+}
+#cpManagePoint:hover, #cpHidePoint:hover, #cpSetDefaultPoint:hover, #cpSetZip:hover, #cpChangePassword:hover, #cpChangeEmail:hover, #cpChangeTelephone:hover, #cpChangeMeterContacts:hover, #cpToggleRetired:hover {
+	color: #FF6701;
+}
+
+
+#defaultPointsForm {
+    vertical-align: top;
+    z-index: 1000;
+    text-align: center;
+    padding: 0px;
+}
+#defaultPointsForm h2 {
+    color: #175A87;
+    font-size: 14px;
+    font-weight: bold;
+    width: 250px;
+    background-color: #CBCCD9;
+    padding: 3px;
+}
+#hidePointsForm {
+    vertical-align: top;
+    z-index: 1000;
+    text-align: center;
+    padding: 0px;
+}
+#hidePointsForm h2 {
+    color: #175A87;
+    font-size: 14px;
+    font-weight: bold;
+    width: 250px;
+    background-color: #CBCCD9;
+    padding: 3px;
+}
+#meterContactsForm {
+    vertical-align: top;
+    width: 100%;
+	padding: 0px;
+}
+#meterContactsForm h2 {
+        color: #175A87;
+        font-size: 14px;
+        font-weight: bold;
+        width: 250px;
+        background-color: #CBCCD9;
+        text-align: center;
+        padding: 3px;
+}
+
+
+
+.pointChecklist {font-size: 0.9em; width: 253px;}
+.pointChecklist .alt { background: transparent;}
+.pointChecklist input { vertical-align: top; }
+.cpAlt {width: 150px;}
+.checklist {    
+	border: 1px solid #ccc;
+	list-style: none;
+	overflow: auto;
+	text-align: left;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+.checklist, .checklist li, .cpChecklist, .cpChecklist li { 
+	margin-left: 0; 
+	padding: 0; 
+}
+.checklist label, .cpChecklist label { 
+	display: block; 
+	padding-left: 0px; 
+	text-indent: 0px; 
+}
+.checklist label:hover, .checklist label.hover{ 
+	background: #FF6701; 
+	color: #fff; 
+}
+
+#hideControlContainer, #defaultControlContainer {
+	vertical-align: top;
+        text-align: center;
+        padding: 0px
+}
+
+#hideLink {
+	cursor: pointer;
+	border: 1px; solid;
+}
+
+#showLink {
+	cursor: pointer;
+	border: 1px; solid;
+}
+
+/* 	color: #175A87; */
+
+
+.tip {
+	width:300px; 
+	background:url(images/tip-text.png) left top repeat-y; 
+	position: relative;
+	z-index: 13000;
+	color: #FFFFFF;
+	padding: 10px;
+}
+.tip-top {
+	background:url(images/tip-top.png) top left no-repeat; 
+	height:10px; 
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #FFFFFF;
+	position: relative;
+	z-index: 13000;
+}
+.tip-title {
+	font-weight: bold;
+	font-size: 12px;
+	color: #FF6701;
+	position: relative;
+	
+}
+.tip-text {
+	color:#FFFFFF; 
+	padding:10px;
+	margin-right: 10px;
+	position: relative;
+	font-size: 11px;
+}
+.tip-bottom {
+	background:url(images/tip-bottom.png) left top no-repeat; 
+	width:300px; 
+	height:10px;
+	border-top: 1px solid #FFFFFF;
+	position: relative;
+	z-index: 13000;
+}
+
+
+.dateSpan {
+	font-size: 12px;
+}
+/* checklist controls */
+
+
+.cpChecklist {
+	border: 1px solid #ccc;
+	list-style: none;
+	overflow: auto;
+	text-align: left;
+	color: #000000;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.cpChecklist label {
+    background: #b2b3be; 
+                }
+.cpChecklist label:hover, .cpChecklist label.hover{ 	
+    background: #8C8D94; 
+	color: #fff; 
+}
+* html .checklist label { 
+	height: 1%; 
+}
+* html .cpChecklist label { 
+	height: 1%; 
+}
+
+
+
+.cpPointChecklist {font-size: 0.9em; width: 100%; }
+.cpPointChecklist .alt { background: #C3C3C3;}
+.cpPointChecklist input { vertical-align: middle; }
+
+/* ul contained radio controls */
+
+.radio {
+	text-align: left;
+	list-style: none;
+	padding: 0px;
+	margin-left: 0px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-right: 0px;
+	color: #000000;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+form fieldset {
+	border-top: 1px solid #666666;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	padding: 0px;
+	font-size: 12px;
+	margin: 0px;
+}
+
+form fieldset legend {
+	color: #000000;
+	font-size: 12px;
+}
+/* for form ajax */
+
+#form_box, #uptForm_box, #profileForm_box, #advForm_box, #evtForm_box, #reportsForm_box, #assetForm_box, #assetUploadForm_box, #dayAheadForm_box {
+	text-align: left;
+	list-style: none;
+	padding: 0px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-right: 10px;
+	color: #000000;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+#form_box input, #uptForm_box input, #profileForm_box input, #advForm_box input, #evtForm_box input, #reportsForm_box input, #assetForm_box input, #assetUploadForm_box input {
+	font-size: 12px;
+}
+ 
+#form_box div, #uptFform_box div, #profileForm_box div, #advForm_box div, #evtForm_box div, #reportsForm_box div, #assetForm_box div, #assetUploadForm_box div {
+	margin: 0px;
+	padding: 0px;
+}
+ 
+#form_box p, #uptForm_box p, #profileForm_box p, #advForm_box p, #evtForm_box p, #reportsForm_box p, #assetForm_box p, #assetUploadForm_box p {
+	float: left;
+	margin: 0px 0px;
+}
+
+/* for datepicker */
+
+input.DatePicker{
+	display: block;
+	width: 145px;
+	padding: 3px 3px 3px 24px;
+	border: 1px solid #0070bf;
+	font-size: 12px;
+	background: #FFFFFF url(images/date.gif) no-repeat top left;
+	cursor: pointer;
+}
+input:focus.DatePicker{
+	background: #fffce9 url(images/datefocus.gif) no-repeat top left;
+}
+
+
+.dp_container{
+	position: relative;
+	padding: 0;
+
+}
+.dp_cal{
+	background-color: #fff;
+	border: 1px solid #0070bf;
+	position: absolute;
+	width: 180px;
+	top: 24px;
+	left: 0;
+	margin: 0px 0px 3px 0px;
+}
+.dp_cal table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.dp_cal select{
+	margin: 2px 3px;
+	font-size: 11px;
+}
+.dp_cal select option{
+	padding: 1px 3px;
+}
+.dp_cal th,
+.dp_cal td{
+	width: 14.2857%;
+	text-align: center;
+	font-size: 11px;
+	padding: 2px 0;
+}
+.dp_cal th{
+	border: solid #aad4f2;
+	border-width: 1px 0;
+	color: #797774;
+	background: #daf2e6;
+	font-weight: bold;
+}
+.dp_cal td{
+	cursor: pointer;
+}
+.dp_cal thead th{
+	background: #d9eefc;
+}
+.dp_cal td.dp_roll{
+	color: #000;
+	background: #fff6bf;
+}
+
+/* must have this for the IE6 select box hiding */
+
+.dp_hide{
+	visibility: hidden;
+}
+.dp_empty{
+	background: #eee;
+}
+.dp_today{
+	background: #daf2e6;
+}
+.dp_selected{
+	color: #fff;
+	background: #328dcf;
+}
+
+/*** meter contact management toggler
+
+
+.toggler {
+        cursor: pointer;
+	padding: 0px;
+	margin: 0px;
+}
+ 
+.element {
+	padding: 0px;
+	margin: 0px;
+}
+ 
+
+

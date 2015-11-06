@@ -1,0 +1,11 @@
+http://localhost:8080/msg?ver=1&imei=4&type=event&trap=Closed&volts=3.7&rssi=-69dBm%2822%29&lat=34.128418&ns=N&lon=84.179832&ew=W
+http://www.trap-alert.com/msg?ver=1&imei=4&type=event&trap=Closed&volts=3.7&rssi=-69dBm%2822%29&lat=34.128418&ns=N&lon=84.179832&ew=W
+
+
+
+
+http://dev.trap-alert.com/msg?ver=1&imei=357460030538677&type=status&trap=Opened&volts=4.0&rssi=-79dBm(17)
+
+http://dev.trap-alert.com/msg?ver=1&imei=357460030538677&type=event&trap=Closed&volts=3.7&rssi=-69dBm(22)&lat=34.128418&ns=N&lon=84.179832&ew=W
+
+http://dev.trap-alert.com/msg?ver=1&imei=357460030538677&type=register&time=205452&lat=30.012951&ns=N&lon=89.918968&ew=W&volts=4.082629&rssi=-77dBm%2818%29&svn=301:303M

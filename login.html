@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>iEMS Login<?php echo $server; ?></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<link href="js/dijit/themes/tundra/tundra.css" rel="stylesheet" type="text/css" />         
+
+	<script type="text/javascript"> 
+	djConfig = {
+	isDebug: false, 
+	parseOnLoad: true
+	}; 
+	</script>
+
+	<script type="text/javascript" src="js/dojo/dojo.js"></script>
+	<script type="text/javascript" src="js/dijit/dijit.js"></script>
+
+
+	<script type="text/javascript" src="js/iems/login.js"></script>
+
+	<style type="text/css">
+	body{
+        	font-family:Arial, Helvetica, sans-serif; 
+        	font-size:12px; 
+        	color:#666666; 
+        	background:#EAEBEB
+	}
+	a {
+        	font-weight: bold;
+        	color: #666666;
+	}
+	.tundra .dijitButtonNode {
+        	background: none;
+        	color: #FFFFFF;
+        	width: 50px;
+        	background: #2B2B47;
+        	font-size: 10px;
+        	font-weight: bold;
+        	text-align: center;
+        	padding: 2px;
+        	border:none;
+        	cursor: pointer;
+	}
+	
+	.tundra .dijitButtonNode:hover {
+        	color: #000;
+	}
+	
+	.tundra .dijitButtonContents {
+        	color: #FFF;
+	}
+	
+	.tundra .dijitButtonContents:hover {
+        	color: #000;
+	}
+	.dijitInputField input {
+        	color: #000;
+	}
+	
+	.tundra .dijitButtonHover {
+        	color: #000;
+	}
+	.tundra .dijitHover {
+        	color: #000;
+	}
+	
+	#footer a {
+        	color: #5386AF;
+	}
+	#footer {
+        	clear: both;
+        	font-size: 10px;
+        	color: #5386AF;
+        	text-align: left;
+        	padding-left: 45px;
+	}
+	#maincontent {
+        	background:url(images/iEMS_Login_bottom.png) no-repeat bottom left;        	
+	}
+	.bolded {
+        	font-weight:bold; 
+        	color:#000033;
+	}
+	#loginResponse {color: #FFF; margin-bottom: 6px;}
+	#loginResponse a {color: #2B2B47;}
+	#forgotPasswordMessage {color: #FFF; display: none;}
+	#forgotPasswordToggle {color: #FFF; cursor: pointer;}
+	</style>
+</head>
+<body bgcolor="#F4F4F4" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="tundra">
+	<table width="825" border="0" align="center" cellpadding="0" cellspacing="0">	
+		<tr>
+			<td width="815">
+				<img src="images/iEMS_Login_top.png" width="815" height="166" alt="" />
+			</td>
+		</tr>
+		
+		<tr>
+			<td height="250" valign="top" style="background:url(images/iEMS_Login_bg_repeat.png) repeat-y">
+			<div id="maincontent" >
+				<table width="815" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="525" valign="top">			  
+							<div style="padding-left: 45px; padding-right: 35px; padding-bottom: 35px;">
+								<p class="bolded">The 2.2 release is designed to work with ISO-NE's New Forward Capacity Market (FCM)</p>
+								<p style="font-style: italic;"><strong>Note:</strong> The iEMS 2.2 system only provides data for the new FCM market, starting May 3, 2010.  For any data before that date please access the iEMs 2.1 site (using your existing name and password) at:</p>
+								<p><a href="http://ibcs.crsolutions.us/" target="_blank">http://ibcs.crsolutions.us</a></p>
+								<p>To access the CRS Help Desk for any meter or iEMS related issue, please use the following link and your iEMS user name and password.</p>
+								<p><a href="http://help.crsolutions.us/" target="_blank">http://help.crsolutions.us</a></p>
+<!-- ======================================== Main Content ================================== -->
+    								<br />
+    								<hr style="border: 1px solid;" />
+								<strong>Minimum System Requirements:</strong>
+								<p>In order to effectively use the iEMS 2.2 system your computer must meet these minimum software requirements:
+									<ul>
+										<li>Microsoft <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank">Internet Explorer</a> version 7 or greater
+											<br />- or -<br />
+											<a href="http://www.mozilla.com/en-US/" target="_blank">Mozilla Firefox</a> version 3.5 or greater<br /><br /></li>
+										<li>Adobe <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash Player</a> version 8 or greater</li>
+									</ul>
+								</p>
+							</div>
+						</td>
+						<td valign="top" style="padding-left: 20px; padding-right: 20px;">
+<!-- ====================================== Login Form ====================================== -->							
+							<form id="loginForm" 
+								dojoType="dijit.form.Form"
+								action="<?php $_SERVER['PHP_SELF']; ?>"
+								method="POST"
+								style="margin-top: 14px;"
+								>
+							<table border="0" cellspacing="0" cellpadding="1">
+							    <tr>								
+								<td align="right">
+								    <input id="username"
+									name="username" 
+									type="text" 
+									dojoType="dijit.form.ValidationTextBox" 
+									required="true"     
+									invalidMessage="You must enter this information.<br />This is your CRS-issued user name. <br />If you are an iEMS user, this is your iEMS user name." 
+									size="22"
+									value="" />			
+								</td>
+								<td width="200" style="color: #FFF;">Username</td>
+							    </tr>
+							    <tr>								
+								<td align="right">
+								    <input id="password"
+									name="password" 
+									type="password" 
+									dojoType="dijit.form.ValidationTextBox" 
+									required="true" 
+									invalidMessage="Please provide your password."
+									size="22"
+									value="" />
+								</td>
+								<td style="color: #FFF;">Password</td>
+							    </tr>
+							    <tr>	
+								<td style="text-align: right;">
+								    <button id="submit"
+									type="submit"
+									dojoType="dijit.form.Button"
+									>Log In
+									<script type="dojo/method" event="startup">
+									    var form = dijit.byId("loginForm");
+									    this.attr("disabled", !form.isValid()); // set initial state
+										this.connect(form, "onValidStateChange", function(state){
+										this.attr("disabled", !state);
+									    });                                    
+									</script>
+								    </button>
+								</td>
+								<td>
+								    <button dojoType="dijit.form.Button" type="reset">Reset
+									<script type="dojo/method" event="onClick">
+									    dojo.byId("username").value="";
+									    dojo.byId("password").value=""; 
+									    dijit.byId("submit").attr("disabled", true);
+									</script>
+								    </button>
+								</td>				  
+							    </tr>
+							</table>
+							</form><!-- Login Form -->
+
+<!-- ==================================== Login Response ==================================== -->
+						    <div id="loginResponse"><br /><?php echo $responseString; ?></div><!-- Login Response -->
+
+<!-- ============================== Forgotten Password Toggle =============================== -->
+						    <div id="forgotPasswordToggle"
+							onClick="javscript:iEMSToggler(dojo.byId('forgotPasswordMessage'))"                    
+							>Forgot Your Password?</div> 
+						    <div id="forgotPasswordMessage"                        
+							>This system is authorized access only.  Please contact your Demand Response Provider to retrieve your password.</div><!-- Forgotten Password Toggle -->
+						</td>
+					</tr>            
+				</table>
+
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td id="footer">Copyright &copy; 2010 Conservation Resource Solutions, Inc.  All rights reserved. Site design by <a href="http://www.rvadv.com" target="_blank">Rearview</a>. </td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/*http://aplus.co.yu/lab/z-pos/*/
+img,  { behavior: url(_template/iepngfix/iepngfix.htc); }
+/* CSS Document */
+
+
+.message_header {
+        color: #FF6701;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+}
+
+.message_body {
+        color: #FFFFFF;
+        font-size: 16px;
+        padding: 6px;
+        text-align: justify;
+}
+
+.message_note {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bolder;
+        padding: 6px;
+        text-align: justify;
+}
+
+.message_footer {
+        color: #FFFFFF;
+        font-size: 14px;
+        padding: 8px;
+        text-align: center;
+}
+
+html	{
+	height: 100%;   /* needed by Netscape to prevent it going crazy*/
+}
+
+body {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;	
+	color: #FFFFFF;
+	text-align: left;
+	vertical-align: top;
+	margin-top: 0px;
+    height: 100%; 
+
+    background-image: url(images/background.png);
+	background-repeat: repeat-x;
+	background-color: #B7B8C3;
+	background-attachment:fixed;
+
+}
+
+h4 {
+	 font-size: 12px;
+}
+.ticker {
+    border: 0 none;
+    text-align: right;
+    background-color: transparent;
+    color: #FF6701;
+    font-weight: bold;
+    text-decoration: none;
+}
+#tickerContainer {
+	margin-top: 20px; 
+	margin-left: 230px;
+}
+table.sortable thead {
+        cursor: pointer;
+}
+td {
+	vertical-align: top;
+	color: #FFFFFF;
+}
+th {
+	vertical-align: bottom;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:link {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover {
+	color: #FF6701;
+}
+
+h1 {
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+h3 {
+	font-size: 14px;
+	padding-bottom: 10px;
+        color: #FF6701;
+        border-bottom: 1px dashed #FF6701;
+        width: 100%;
+}
+input.cmForm {
+	border: 1px solid #CECECE;
+}
+.cmTable {
+	border-bottom: 1px solid #1B6097;
+}
+.defaultButton {
+		color: #FFFFFF;
+		background-color: #FE944F;
+		border: 1px solid #FF6701;
+		cursor: pointer;
+}
+.linkButton {
+		color: #FF6701;
+		background-color: transparent;
+		cursor: pointer;
+}
+.linkButton:hover {
+		color: #FFFFFF;
+		cursor: pointer;
+                text-decoration: underline;
+}
+
+#canvas {
+	margin-left: auto;
+	margin-right: auto;
+	width: 990px;	
+	min-height: 700px;
+	padding: 0px;
+/*	z-index: 1000;*/
+}
+#dataReturn {
+	color: #FFFFFF;
+	text-align: right;
+	vertical-align: top;
+	font-size: 14px;    
+	
+}
+ 
+#dataReturn_res {
+    text-align: left;
+}
+ 
+#dataReturn_res.ajax-loading{
+	padding: 20px 0;
+	background: url(images/ticker.gif) no-repeat center;
+}
+
+.print {
+	background-image: url(images/printbutton.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+.print:active {
+	background-image: url(images/printbutton_over.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+.magnify {
+	background-image: url(images/magnifybutton.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+.magnify:active {
+	background-image: url(images/magnifybutton_over.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+
+
+.export {
+	background-image: url(images/exportbutton.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+.export:active {
+	background-image: url(images/exportbutton_over.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+
+.tabular {
+	background-image: url(images/tabularbutton.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+.tabular:active {
+	background-image: url(images/tabularbutton_over.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	behavior: url(_template/iepngfix/iepngfix.htc);
+}
+#user
+{
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 20px;
+	color: #FFFFFF;
+}
+
+#charts
+{
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 20px;
+	vertical-align: top;
+}
+
+
+#summaries
+{
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 20px;
+	color: #FFFFFF;
+
+}
+.analysisReturn {
+	vertical-align: top;
+	padding: 5px;
+}
+
+.error {
+	background-color: transparent;
+	text-align: center;
+	font-size: 12px;
+	color: #FA6E10;
+	vertical-align: top;
+	border: 2px dotted #DDDDDD;
+	padding: 10px;
+}
+#weather {
+	color: #FF6701;
+	text-align: center;
+}
+#temperature {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+input.submit {
+	background-color:  #FF6701;
+}
+.note {
+	color: #FF6701;
+	font-size: 12px;
+	padding: 20px;
+} 
+
+#wrapper
+{
+    float: left; 
+    margin: 0px auto; 
+    width: 100%;
+    min-height: 700px;
+    background-color: #175A87;
+    background-image: url(images/bkgPowerlines.jpg);
+	background-repeat: no-repeat;
+	background-position: top;	
+    padding-bottom: 30px;
+}
+
+
+/* for Internet Explorer */
+/*\*/
+* html #canvas {
+height: 700px;
+}
+
+.summaryTable td {
+    text-align: left;
+}

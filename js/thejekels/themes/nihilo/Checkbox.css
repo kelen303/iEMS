@@ -1,0 +1,71 @@
+/*
+ *  thejekels CheckBox Widgets CSS
+ *
+ *	Order of images in the sprite (from L to R):
+ *		checkbox	normal 	 - checked
+ *							 - unchecked
+ *							 - mixed
+ *					disabled - checked
+ *							 - unchecked
+ *							 - mixed
+ *					hover 	 - checked
+ *							 - unchecked
+ *							 - mixed
+*/
+.nihilo .thejekelsCheckBox,
+.nihilo .thejekelsCheckBoxIcon {
+	background-image: url('images/spriteCheckbox.gif'); /* checkbox sprite image */
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.nihilo .thejekelsCheckBox, 
+.nihilo .thejekelsCheckBoxIcon {
+	/* unchecked */
+	background-position: -16px;
+}
+
+.nihilo .thejekelsCheckBoxChecked, 
+.nihilo .thejekelsCheckBoxIcon {
+	/* checked */
+	background-position: 0px;
+}
+
+.nihilo .thejekelsCheckBoxDisabled {
+	/* disabled */
+	background-position: -48px;
+}
+
+.nihilo .thejekelsCheckBoxCheckedDisabled {
+	/* disabled but checked */
+	background-position: -48px;
+}
+
+.nihilo .thejekelsCheckBoxMixed {
+	/* checked & mixed */
+	background-position: -32px;
+}
+
+.nihilo .thejekelsCheckBoxMixedDisabled {
+	/* checked & mixed */
+	background-position: -64px;
+}
+
+.nihilo .thejekelsCheckBoxHover {
+	/* hovering over an unchecked enabled checkbox */
+	background-position: -112px;
+}
+
+.nihilo .thejekelsCheckBoxCheckedHover {
+	/* hovering over a checked enabled checkbox */
+	background-position: -96px;
+}
+
+.nihilo .thejekelsCheckBoxMixedHover {
+	/* checked & mixed */
+	background-position: -128px;
+}
+
