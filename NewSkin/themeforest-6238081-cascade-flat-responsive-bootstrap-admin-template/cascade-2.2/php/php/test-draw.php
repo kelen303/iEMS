@@ -1,0 +1,3 @@
+<?php
+	$graph = new Chart();
+?>
